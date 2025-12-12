@@ -209,7 +209,7 @@
                 </div>
             </div>
 
-            <a href="{{ route('quote') }}"
+            <a href="{{ route('contact') }}"
                class="w-full mt-8 bg-[#8B1A32] hover:bg-[#7A1629] text-white text-center py-6 text-lg font-semibold rounded-xl transition-all hover:shadow-lg">
                 Get a Quote
             </a>

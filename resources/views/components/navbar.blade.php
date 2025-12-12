@@ -64,16 +64,16 @@
                 @foreach($links as $link)
                     @php $active = request()->routeIs($link['route']); @endphp
                     <a href="{{ route($link['route']) }}"
-                       class="text-slate-600 hover:text-[#8B1A32] font-medium transition-colors relative group">
+                       class="font-medium transition-colors relative group {{ $active ? 'text-[#8B1A32]' : 'text-slate-600 hover:text-[#8B1A32]' }}">
                         {{ $link['label'] }}
-                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#8B1A32] group-hover:w-full transition-all duration-300"></span>
+                        <span class="absolute -bottom-1 left-0 h-0.5 bg-[#8B1A32] transition-all duration-300 {{ $active ? 'w-full' : 'w-0 group-hover:w-full' }}"></span>
                     </a>
                 @endforeach
             </div>
 
             <!-- Desktop CTA -->
             <div class="hidden lg:flex items-center gap-4">
-                <a href="{{ route('quote') }}"
+                <a href="{{ route('contact') }}"
                    class="bg-[#8B1A32] hover:bg-[#7A1629] text-white px-6 py-3 rounded-xl font-semibold transition-all hover:shadow-lg">
                     Get a Quote
                 </a>
@@ -100,15 +100,16 @@
         <div class="container mx-auto px-6 py-4">
             <div class="flex flex-col gap-2">
                 @foreach($links as $link)
+                    @php $active = request()->routeIs($link['route']); @endphp
                     <a href="{{ route($link['route']) }}"
                        @click="open = false"
-                       class="text-slate-600 hover:text-[#8B1A32] font-medium py-3 px-4 rounded-lg hover:bg-slate-50 transition">
+                       class="font-medium py-3 px-4 rounded-lg transition {{ $active ? 'text-[#8B1A32] bg-[#8B1A32]/10 font-semibold' : 'text-slate-600 hover:text-[#8B1A32] hover:bg-slate-50' }}">
                         {{ $link['label'] }}
                     </a>
                 @endforeach
 
                 <div class="mt-4 pt-4 border-t">
-                    <a href="{{ route('quote') }}"
+                    <a href="{{ route('contact') }}"
                        @click="open = false"
                        class="w-full block text-center bg-[#8B1A32] hover:bg-[#7A1629] text-white py-3 rounded-xl font-semibold transition">
                         Get a Quote

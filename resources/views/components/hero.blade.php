@@ -39,7 +39,7 @@
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-4 mb-12" data-aos="fade-up" data-aos-delay="400">
-                    <a href="{{ route('quote') }}"
+                    <a href="{{ route('contact') }}"
                        class="inline-flex items-center justify-center gap-2 bg-[#8B1A32] hover:bg-[#7A1629] text-white px-8 py-6 text-lg font-semibold rounded-xl shadow-lg shadow-[#8B1A32]/30 hover:scale-105 transition-all duration-300 group">
                         Get a Quote
                         <i class="ph-arrow-right group-hover:translate-x-1 transition"></i>

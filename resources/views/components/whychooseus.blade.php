@@ -34,7 +34,6 @@
 
                 $colors = [
                     'amber'   => ['bg' => 'bg-amber-100',   'icon' => 'text-amber-600',   'ring' => 'ring-amber-200'],
-                    '],
                     'emerald' => ['bg' => 'bg-emerald-100', 'icon' => 'text-emerald-600', 'ring' => 'ring-emerald-200'],
                     'blue'    => ['bg' => 'bg-blue-100',    'icon' => 'text-blue-600',    'ring' => 'ring-blue-200'],
                     'purple'  => ['bg' => 'bg-purple-100',  'icon' => 'text-purple-600',  'ring' => 'ring-purple-200'],

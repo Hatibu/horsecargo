@@ -23,8 +23,7 @@
                     [
                         'name' => 'Amina Juma',
                         'role' => 'Business Owner, Dar es Salaam',
-                        'image' => 'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=200&h=200&fit=crop&crop=face',
-                        'auto=format',
+                        'image' => 'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=200&h=200&fit=crop&crop=face&auto=format',
                         'text' => 'Horse Cargo has been our shipping partner for 3 years. Their reliability and professionalism have helped our business grow. The e-commerce assistance service is a game-changer!',
                         'type' => 'business'
                     ],
@@ -55,8 +54,8 @@
             @foreach($testimonials as $index => $t)
                 @php
                     $badgeColor = $t['type'] === 'business' ? 'bg-blue-100 text-blue-700' :
-                                  $t['type'] === 'enterprise' ? 'bg-purple-100 text-purple-700' :
-                                  'bg-green-100 text-green-700';
+                                  ($t['type'] === 'enterprise' ? 'bg-purple-100 text-purple-700' :
+                                  'bg-green-100 text-green-700');
                     $badgeText = ucfirst($t['type']);
                 @endphp
 
