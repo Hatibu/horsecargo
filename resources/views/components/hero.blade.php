@@ -1,4 +1,4 @@
-<section class="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+<section class="relative min-h-screen flex items-center overflow-hidden bg-slate-900">
     <!-- Background Pattern -->
     <div class="absolute inset-0 opacity-10">
         <div class="absolute inset-0" style="
@@ -22,7 +22,7 @@
             {{-- Left Content --}}
             <div data-aos="fade-right">
                 <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6" data-aos="fade-up" data-aos-delay="100">
-                    <i class="ph-map-pin text-amber-400"></i>
+                    <i class="ph-map-pin text-amber-400" style="display: inline-block !important; width: 1em !important; height: 1em !important; opacity: 1 !important; visibility: visible !important;"></i>
                     <span class="text-white/80 text-sm">Dubai, UAE to Tanzania</span>
                 </div>
 
@@ -40,12 +40,12 @@
 
                 <div class="flex flex-col sm:flex-row gap-4 mb-12" data-aos="fade-up" data-aos-delay="400">
                     <a href="{{ route('contact') }}"
-                       class="inline-flex items-center justify-center gap-2 bg-[#8B1A32] hover:bg-[#7A1629] text-white px-8 py-6 text-lg font-semibold rounded-xl shadow-lg shadow-[#8B1A32]/30 hover:scale-105 transition-all duration-300 group">
+                       class="inline-flex items-center justify-center gap-2 bg-[#8B1A32] hover:bg-[#7A1629] text-white px-5 py-2.5 text-sm font-semibold rounded-lg shadow-md shadow-[#8B1A32]/30 hover:scale-105 transition-all duration-300 group">
                         Get a Quote
-                        <i class="ph-arrow-right group-hover:translate-x-1 transition"></i>
+                        
                     </a>
                     <a href="#track"
-                       class="inline-flex items-center justify-center gap-2 border-2 border-white/30 text-white hover:bg-white/10 px-8 py-6 text-lg font-semibold rounded-xl backdrop-blur-sm transition">
+                       class="inline-flex items-center justify-center gap-2 border-2 border-white/30 text-white hover:bg-white/10 px-5 py-2.5 text-sm font-semibold rounded-lg backdrop-blur-sm transition">
                         Track Shipment
                     </a>
                 </div>
@@ -80,8 +80,8 @@
                     {{-- Floating Air Freight Card --}}
                     <div class="absolute -left-8 top-1/4 bg-white rounded-2xl p-5 shadow-2xl" data-aos="zoom-in" data-aos-delay="600">
                         <div class="flex items-center gap-4">
-                            <div class="w-14 h-14 rounded-xl bg-blue-100 flex items-center justify-center">
-                                <i class="ph-airplane-tilt text-3xl text-blue-600"></i>
+                            <div class="w-8 h-8 rounded-xl bg-blue-100 flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-blue-600"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
                             </div>
                             <div>
                                 <div class="text-sm text-slate-500">Air Freight</div>
@@ -93,8 +93,8 @@
                     {{-- Floating Sea Freight Card --}}
                     <div class="absolute -right-right-8 bottom-1/4 bg-white rounded-2xl p-5 shadow-2xl" data-aos="zoom-in" data-aos-delay="800">
                         <div class="flex items-center gap-4">
-                            <div class="w-14 h-14 rounded-xl bg-cyan-100 flex items-center justify-center">
-                                <i class="ph-anchor-simple text-3xl text-cyan-600"></i>
+                            <div class="w-8 h-8 rounded-xl bg-cyan-100 flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-cyan-600"><path d="M12 10.189V14"/><path d="M12 2v3"/><path d="M19 13V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v6"/><path d="M19.38 20A11.6 11.6 0 0 0 21 14l-8.188-3.639a2 2 0 0 0-1.624 0L3 14a11.6 11.6 0 0 0 2.81 7.76"/><path d="M2 21c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1s1.2 1 2.5 1c2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></svg>
                             </div>
                             <div>
                                 <div class="text-sm text-slate-500">Sea Freight</div>

@@ -40,14 +40,10 @@
     <div class="container mx-auto px-6 lg:px-12">
         <div class="flex justify-between items-center h-20">
             <!-- Logo -->
-            <a href="{{ route('home') }}" class="flex items-center gap-3">
+            <a href="{{ route('home') }}" class="flex items-center">
                 <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_6930211329811e87e3d81b16/713909efc_Horsecargologo.jpg"
                      alt="Horse Cargo"
                      class="h-12 w-12 object-contain rounded-lg shadow">
-                <div class="hidden sm:block">
-                    <span class="font-bold text-xl text-slate-800">Horse Cargo</span>
-                    <span class="block text-xs text-slate-500">Dubai to Tanzania</span>
-                </div>
             </a>
 
             <!-- Desktop Navigation -->

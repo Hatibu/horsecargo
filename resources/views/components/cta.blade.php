@@ -24,20 +24,16 @@
             <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-16" data-aos="fade-up" data-aos-delay="200">
                 <a href="{{ route('contact') }}"
                    class="inline-flex items-center justify-center gap-3 bg-white text-[#8B1A32] hover:bg-gray-50 px-8 py-4 text-base font-semibold rounded-lg shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 group min-w-[200px]">
-                    <i class="ph-package text-xl text-[#8B1A32]"></i>
                     <span>Get a Quote</span>
-                    <i class="ph-arrow-right text-xl text-[#8B1A32] group-hover:translate-x-1 transition-transform"></i>
                 </a>
 
                 <a href="#track"
                    class="inline-flex items-center justify-center gap-3 bg-white/10 backdrop-blur-md border-2 border-white/40 text-white hover:bg-white/20 hover:border-white/60 px-8 py-4 text-base font-semibold rounded-lg shadow-md hover:shadow-lg transition-all duration-300 min-w-[200px] group">
-                    <i class="ph-navigation-arrow text-xl group-hover:rotate-12 transition-transform"></i>
                     <span>Track Cargo</span>
                 </a>
 
                 <a href="{{ route('contact') }}"
                    class="inline-flex items-center justify-center gap-3 bg-white/10 backdrop-blur-md border-2 border-white/40 text-white hover:bg-white/20 hover:border-white/60 px-8 py-4 text-base font-semibold rounded-lg shadow-md hover:shadow-lg transition-all duration-300 min-w-[200px] group">
-                    <i class="ph-chat-circle text-xl group-hover:scale-110 transition-transform"></i>
                     <span>Contact Us</span>
                 </a>
             </div>

@@ -71,10 +71,9 @@
             <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12">
                 @php
                     $platforms = [
-                        ['name' => 'Amazon', 'logo' => 'https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg'],
-                        ['name' => 'Noon', 'logo' => 'https://upload.wikimedia.org/wikipedia/commons/4/4c/Noon_Logo.png'],
-                        ['name' => 'Shein', 'logo' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/SHEIN-logo.svg/512px-SHEIN-logo.svg.png'],
-                        ['name' => 'AliExpress', 'logo' => 'https://upload.wikimedia.org/wikipedia/commons/2/20/AliExpress.png'],
+                        ['name' => 'Amazon', 'logo' => asset('media/images/amazon.png'), 'fallback' => 'https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg'],
+                        ['name' => 'Noon', 'logo' => asset('media/images/noon.png'), 'fallback' => 'https://upload.wikimedia.org/wikipedia/commons/4/4c/Noon_Logo.png'],
+                        ['name' => 'Shein', 'logo' => asset('media/images/shein.png'), 'fallback' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/SHEIN-logo.svg/512px-SHEIN-logo.svg.png'],
                     ];
                 @endphp
 
@@ -83,7 +82,8 @@
                          data-aos="zoom-in" data-aos-delay="{{ $index * 100 }}">
                         <img src="{{ $platform['logo'] }}"
                              alt="{{ $platform['name'] }}"
-                             class="h-8 md:h-10 object-contain filter grayscale hover:grayscale-0 transition-all duration-500">
+                             class="h-8 md:h-10 object-contain transition-all duration-500"
+                             onerror="this.onerror=null; this.src='{{ $platform['fallback'] }}';">
                     </div>
                 @endforeach
 

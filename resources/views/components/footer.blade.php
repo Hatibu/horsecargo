@@ -146,7 +146,10 @@
                         aria-label="Back to top"
                         x-data
                     >
-                        <i class="ph-arrow-up text-lg text-white group-hover:scale-110 transition-transform" style="display: inline-block !important; width: 1.125em; height: 1.125em;"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-white group-hover:scale-110 transition-transform">
+                            <path d="m5 12 7-7 7 7"/>
+                            <path d="M12 19V5"/>
+                        </svg>
                     </button>
                 </div>
             </div>

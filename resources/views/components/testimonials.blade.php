@@ -8,7 +8,7 @@
                 Testimonials
             </span>
             <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
-                Trusted by Thousands of Happy Customers
+                What Our Customers Say
             </h2>
             <p class="text-slate-600 text-lg">
                 From individual shoppers to large corporations, our customers trust us<br class="hidden sm:block">

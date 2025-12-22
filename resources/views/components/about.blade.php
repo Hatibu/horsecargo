@@ -86,3 +86,226 @@
         </div>
     </div>
 </section>
+
+{{-- Company Story Section --}}
+<section class="py-24 bg-slate-50">
+    <div class="container mx-auto px-6 lg:px-12">
+        <div class="max-w-4xl mx-auto text-center mb-16" data-aos="fade-up">
+            <span class="inline-block bg-[#8B1A32]/10 text-[#8B1A32] px-4 py-2 rounded-full text-sm font-medium mb-4">
+                Our Story
+            </span>
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-6">
+                Building Bridges Across Continents
+            </h2>
+            <p class="text-slate-600 text-lg leading-relaxed">
+                Since our establishment, Horse Cargo has been dedicated to simplifying international shipping 
+                between Dubai and Tanzania. We started with a simple mission: to make cross-border logistics 
+                accessible, reliable, and affordable for everyone.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            @php
+                $milestones = [
+                    [
+                        'year' => '2014',
+                        'title' => 'Foundation',
+                        'desc' => 'Horse Cargo was founded with a vision to connect Dubai and Tanzania through reliable logistics services.',
+                    ],
+                    [
+                        'year' => '2017',
+                        'title' => 'Tanzania Office',
+                        'desc' => 'Opened our Dar es Salaam office to provide local support and faster delivery services.',
+                    ],
+                    [
+                        'year' => '2024',
+                        'title' => 'Today',
+                        'desc' => 'Serving thousands of customers with 10,000+ successful shipments and 99.5% on-time delivery rate.',
+                    ],
+                ];
+            @endphp
+
+            @foreach($milestones as $index => $milestone)
+                <div class="text-center" data-aos="fade-up" data-aos-delay="{{ $index * 150 }}">
+                    <div class="text-4xl font-bold text-[#8B1A32] mb-3">{{ $milestone['year'] }}</div>
+                    <h3 class="text-xl font-semibold text-slate-800 mb-3">{{ $milestone['title'] }}</h3>
+                    <p class="text-slate-600 leading-relaxed">{{ $milestone['desc'] }}</p>
+                </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+
+{{-- Office Locations Section --}}
+<section class="py-24 bg-white">
+    <div class="container mx-auto px-6 lg:px-12">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <span class="inline-block bg-[#8B1A32]/10 text-[#8B1A32] px-4 py-2 rounded-full text-sm font-medium mb-4">
+                Our Offices
+            </span>
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
+                Strategic Locations for Global Reach
+            </h2>
+            <p class="text-slate-600 text-lg max-w-2xl mx-auto">
+                With offices in both Dubai and Tanzania, we provide seamless coordination and local support 
+                throughout your shipping journey.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            @php
+                $offices = [
+                    [
+                        'city' => 'Dubai, UAE',
+                        'address' => 'Dubai International Airport Free Zone',
+                        'phone' => '+971 50 608 3531',
+                        'email' => 'dubai@horsecargo.com',
+                        'hours' => 'Sunday - Thursday: 9:00 AM - 6:00 PM',
+                        'color' => 'blue',
+                    ],
+                    [
+                        'city' => 'Dar es Salaam, Tanzania',
+                        'address' => 'City Center Business District',
+                        'phone' => '+255 77 822 2251',
+                        'email' => 'tanzania@horsecargo.com',
+                        'hours' => 'Monday - Friday: 8:00 AM - 5:00 PM',
+                        'color' => 'emerald',
+                    ],
+                ];
+            @endphp
+
+            @foreach($offices as $index => $office)
+                @php
+                    $colorClasses = [
+                        'blue' => ['bg' => 'bg-blue-100', 'text' => 'text-blue-600'],
+                        'emerald' => ['bg' => 'bg-emerald-100', 'text' => 'text-emerald-600'],
+                    ];
+                    $c = $colorClasses[$office['color']] ?? $colorClasses['blue'];
+                @endphp
+                <div class="bg-gradient-to-br from-slate-50 to-white rounded-2xl p-8 border border-slate-200 shadow-lg hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="{{ $index * 100 }}">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-16 h-16 rounded-xl {{ $c['bg'] }} flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="{{ $c['text'] }}">
+                                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-800">{{ $office['city'] }}</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-slate-400 mt-0.5">
+                                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            <p class="text-slate-600">{{ $office['address'] }}</p>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-slate-400">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                            <a href="tel:{{ str_replace(' ', '', $office['phone']) }}" class="text-slate-700 hover:text-[#8B1A32] transition">{{ $office['phone'] }}</a>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-slate-400">
+                                <rect width="20" height="16" x="2" y="4" rx="2"/>
+                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                            </svg>
+                            <a href="mailto:{{ $office['email'] }}" class="text-slate-700 hover:text-[#8B1A32] transition">{{ $office['email'] }}</a>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-slate-400">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                            <p class="text-slate-600">{{ $office['hours'] }}</p>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+
+{{-- Certifications & Compliance Section --}}
+<section class="py-24 bg-slate-900 text-white">
+    <div class="container mx-auto px-6 lg:px-12">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="inline-block bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
+                    Certifications & Compliance
+                </span>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+                    Licensed & Certified Operations
+                </h2>
+                <p class="text-white/80 text-lg">
+                    We maintain the highest standards of compliance and certification to ensure your cargo 
+                    is handled with the utmost care and professionalism.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                @php
+                    $certifications = [
+                        [
+                            'title' => 'UAE Licensed Freight Forwarder',
+                            'desc' => 'Fully licensed and registered freight forwarding company in the United Arab Emirates.',
+                        ],
+                        [
+                            'title' => 'IATA Certified',
+                            'desc' => 'International Air Transport Association certified for handling dangerous goods and air cargo.',
+                        ],
+                        [
+                            'title' => 'Customs Brokerage License',
+                            'desc' => 'Authorized customs clearance services in both Dubai and Tanzania.',
+                        ],
+                        [
+                            'title' => 'ISO Compliance',
+                            'desc' => 'Following international standards for quality management and cargo handling.',
+                        ],
+                    ];
+                @endphp
+
+                @foreach($certifications as $index => $cert)
+                    <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300" data-aos="fade-up" data-aos-delay="{{ $index * 100 }}">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-lg bg-[#8B1A32] flex items-center justify-center flex-shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                    <polyline points="22 4 12 14.01 9 11.01"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-white mb-2 text-lg">{{ $cert['title'] }}</h3>
+                                <p class="text-white/70 text-sm leading-relaxed">{{ $cert['desc'] }}</p>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
+</section>
+
+{{-- Statistics Section --}}
+<section class="py-24 bg-gradient-to-br from-[#8B1A32] to-[#6B1426] text-white">
+    <div class="container mx-auto px-6 lg:px-12">
+        <div class="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            @php
+                $stats = [
+                    ['value' => '10,000+', 'label' => 'Shipments Delivered', 'icon' => 'package'],
+                    ['value' => '5,000+', 'label' => 'Happy Customers', 'icon' => 'users'],
+                    ['value' => '99.5%', 'label' => 'On-Time Delivery', 'icon' => 'clock'],
+                    ['value' => '10+', 'label' => 'Years Experience', 'icon' => 'trophy'],
+                ];
+            @endphp
+
+            @foreach($stats as $index => $stat)
+                <div class="text-center" data-aos="zoom-in" data-aos-delay="{{ $index * 100 }}">
+                    <div class="text-5xl md:text-6xl font-bold mb-3">{{ $stat['value'] }}</div>
+                    <div class="text-white/90 text-lg">{{ $stat['label'] }}</div>
+                </div>
+            @endforeach
+        </div>
+    </div>
+</section>
